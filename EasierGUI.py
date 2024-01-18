@@ -72,7 +72,7 @@ if os.path.exists('/content/'):
             # If the response was a failure, print an error message
             print("Failed to download file. Status code: " + str(response.status_code) + ".")
 else:
-    print("\n-------------------------------\nRVC v2 Easy GUI (Local Edition)\n-------------------------------\n")
+    print("\n-------------------------------\nRVC v2 Easy GUI (Colab Edition)\n-------------------------------\n")
     print("-------------------------------\nNot running on Google Colab, skipping download.")
 
 def formant_apply(qfrency, tmbre):
@@ -1478,15 +1478,9 @@ with gr.Blocks(theme=gr.themes.Base(), title='Mangio-RVC-Web 💻') as app:
     with gr.Tabs():
         with gr.TabItem("Inference"):
             gr.HTML("<h1> Easy GUI v2 (rejekts) - adapted to Mangio-RVC-Fork 💻 [With extra features and fixes by kalomaze & alexlnkp]</h1>")
+            gr.HTML("<h1> i'm making this for support free colab notebook</h1>")
 
-            # Inference Preset Row
-            # with gr.Row():
-            #     mangio_preset = gr.Dropdown(label="Inference Preset", choices=sorted(get_presets()))
-            #     mangio_preset_name_save = gr.Textbox(
-            #         label="Your preset name"
-            #     )
-            #     mangio_preset_save_btn = gr.Button('Save Preset', variant="primary")
-
+        
             # Other RVC stuff
             with gr.Row():
                 sid0 = gr.Dropdown(label="1.Choose your Model.", choices=sorted(names), value=check_for_name())
